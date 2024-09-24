@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vehicle Booking System</h1>
+    </header>
+    <main>
+        <div class="image-grid">
+            <!-- Add more image containers here -->
+            <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+              <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+              <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+              <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+              <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+              <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+              <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+              <div class="image-container">
+                <img src="ride.jpg" alt="Car" class="booking-image" onclick="redirectToBookingForm('Car', 'ride.jpg')">
+                <p>Car</p>
+              </div>
+            <div class="image-container">
+                <img src="images/bike.jpg" alt="Bike" class="booking-image" onclick="redirectToBookingForm('Bike', 'images/bike.jpg')">
+                <p>Bike</p>
+            </div>
+            <div class="image-container">
+                <img src="images/van.jpg" alt="Van" class="booking-image" onclick="redirectToBookingForm('Van', 'images/van.jpg')">
+                <p>Van</p>
+            </div>
+            <!-- Repeat the above <div> for additional images -->
+        </div>
+    </main>
+    <script>
+        function redirectToBookingForm(vehicle, image) {
+            const url = `booking-form.html?vehicle=${encodeURIComponent(vehicle)}&image=${encodeURIComponent(image)}`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

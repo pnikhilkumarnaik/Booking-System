@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ticket Confirmation</h1>
+    </header>
+    <main>
+        <div class="ticket-container">
+            <h2>Booking Details</h2>
+            <div class="ticket-info">
+                <p><strong>Vehicle:</strong> <span id="vehicle-name"></span></p>
+                <p><strong>Image:</strong> <img id="vehicle-image" src="" alt="Vehicle Image" class="ticket-image"></p>
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Phone:</strong> <span id="phone"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Date:</strong> <span id="date"></span></p>
+                <p><strong>Time:</strong> <span id="time"></span></p>
+            </div>
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+    </main>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('vehicle-name').textContent = urlParams.get('vehicle');
+            document.getElementById('vehicle-image').src = urlParams.get('image');
+            document.getElementById('name').textContent = urlParams.get('name');
+            document.getElementById('phone').textContent = urlParams.get('phone');
+            document.getElementById('email').textContent = urlParams.get('email') || 'N/A';
+            document.getElementById('date').textContent = urlParams.get('date');
+            document.getElementById('time').textContent = urlParams.get('time');
+        };
+    </script>
+</body>
+</html>
